@@ -1,14 +1,15 @@
 "use client";
 
+import CodeEditor from "@/components/codeEditor";
 import FileSelector from "@/components/fileStructure";
 import React, { useState } from "react";
 
 const PlayGround = () => {
-  const files = [
+  const [files, setFiles] = useState([
     { name: "index.html", language: "html", content: "" },
     { name: "style.css", language: "css", content: "" },
     { name: "script.js", language: "javascript", content: "" },
-  ];
+  ]);
 
   const [selectedFile, setSelectedFile] = useState(files[0]);
 
@@ -23,6 +24,8 @@ const PlayGround = () => {
         selectedFile={selectedFile}
         onFileClick={handleFileClick}
       />
+
+      <CodeEditor />
     </div>
   );
 };
