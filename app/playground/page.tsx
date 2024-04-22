@@ -2,6 +2,7 @@
 
 import CodeEditor from "@/components/codeEditor";
 import FileSelector from "@/components/fileStructure";
+import XtermTerminal from "@/components/terminal";
 import React, { useState } from "react";
 
 const PlayGround = () => {
@@ -26,6 +27,8 @@ const PlayGround = () => {
       />
 
       <CodeEditor />
+
+      <XtermTerminal />
     </div>
   );
 };
