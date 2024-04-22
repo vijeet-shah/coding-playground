@@ -40,17 +40,30 @@ const PlayGround = () => {
 `;
 
   return (
-    <div>
+    <div className="flex h-screen">
       <FileSelector
         files={files}
         selectedFile={selectedFile}
         onFileClick={handleFileClick}
       />
 
-      <CodeEditor />
+      <div className="flex flex-col w-1/2">
+        <div className="flex-grow p-4">
+          <h2 className="text-2xl font-bold mb-4">Code Editor</h2>
 
-      <XtermTerminal />
+          <CodeEditor />
+        </div>
 
+        <div className="mt-4 px-4">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+            Run
+          </button>
+        </div>
+        <div className="p-4">
+          <h2 className="text-2xl font-bold mb-4">Terminal</h2>
+          <XtermTerminal />
+        </div>
+      </div>
       <OutputBrowser html={html} />
     </div>
   );
