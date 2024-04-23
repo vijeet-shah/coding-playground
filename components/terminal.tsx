@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useEffect } from "react";
 import { Terminal } from "@xterm/xterm";
+import ResizableComponent from "./resizableComponent";
 
 const XtermTerminal = () => {
   const terminalRef = useRef(null);
@@ -13,7 +14,11 @@ const XtermTerminal = () => {
     }
   }, []);
 
-  return <div ref={terminalRef} className="terminal bg-black text-white" />;
+  return (
+    <ResizableComponent resizeHandles={["top", "right", "left"]}>
+      <div ref={terminalRef} className="terminal bg-black text-white" />
+    </ResizableComponent>
+  );
 };
 
 export default XtermTerminal;
