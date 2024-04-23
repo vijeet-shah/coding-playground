@@ -172,7 +172,7 @@ const ResizableComponent: React.FC<ResizableComponentProps> = ({
     <div
       ref={componentRef}
       style={{ width: `${width}px`, height: `${height}px` }}
-      className="relative border-2 border-gray-800 overflow-hidden"
+      className="relative  overflow-hidden"
     >
       {children}
       {renderResizeHandles()}

@@ -49,16 +49,17 @@ const PlayGround = () => {
 
       <div className="flex flex-col w-1/2">
         <div className="flex-grow p-4">
-          <h2 className="text-2xl font-bold mb-4">Code Editor</h2>
+          <div className="flex mt-4 px-4 ">
+            {" "}
+            <h2 className="text-2xl font-bold mb-4">Code Editor</h2>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+              Run
+            </button>
+          </div>
 
           <CodeEditor />
         </div>
 
-        <div className="mt-4 px-4">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-            Run
-          </button>
-        </div>
         <div className="p-4">
           <h2 className="text-2xl font-bold mb-4">Terminal</h2>
           <XtermTerminal />

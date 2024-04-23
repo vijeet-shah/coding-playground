@@ -17,15 +17,15 @@ const FileSelector: React.FC<FileSelectorProps> = ({
   onFileClick,
 }) => {
   return (
-    <ResizableComponent resizeHandles={["right"]}>
-      <div className="w-1/4 bg-gray-100 p-4">
+    <ResizableComponent resizeHandles={["right", "left"]} initialHeight={870}>
+      <div className=" bg-gray-100 p-4 w-56 h-full text-black border-2 border-gray-800">
         <h2 className="text-2xl font-bold mb-4">Files</h2>
         <ul>
           {files.map((file) => (
             <li
               key={file.name}
               className={`cursor-pointer ${
-                selectedFile.name === file.name ? "bg-blue-200" : ""
+                selectedFile.name === file.name ? "bg-black text-white" : ""
               }`}
               onClick={() => onFileClick(file)}
             >

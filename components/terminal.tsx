@@ -15,8 +15,15 @@ const XtermTerminal = () => {
   }, []);
 
   return (
-    <ResizableComponent resizeHandles={["top", "right", "left"]}>
-      <div ref={terminalRef} className="terminal bg-black text-white" />
+    <ResizableComponent
+      resizeHandles={["top", "right", "left"]}
+      initialHeight={313}
+      initialWidth={900}
+    >
+      <div
+        ref={terminalRef}
+        className="terminal bg-black text-white border-2 border-gray-800"
+      />
     </ResizableComponent>
   );
 };

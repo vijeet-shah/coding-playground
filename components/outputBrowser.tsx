@@ -6,8 +6,12 @@ interface PreviewProps {
 
 const OutputBrowser: React.FC<PreviewProps> = ({ html }) => {
   return (
-    <ResizableComponent resizeHandles={["left"]}>
-      <div className="w-3/4 p-4">
+    <ResizableComponent
+      resizeHandles={["left"]}
+      initialHeight={900}
+      initialWidth={500}
+    >
+      <div className="h-full p-4 ml-10 border-2 border-gray-800">
         <h2 className="text-2xl font-bold mb-4">Preview</h2>
         <iframe
           srcDoc={html}
